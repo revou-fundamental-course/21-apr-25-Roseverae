@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Konversi Suhu - Cindy</title>
+
+    <!-- CSS External -->
+     <link rel="stylesheet" href="CSS\style.css">
+</head>
+
+<body>
+    <!-- Header Content -->
+     <header></header>
+
+     <!-- Main Content -->
+      <main>
+        <!-- Introduction -->
+         <section>
+                <h1>Temperature Converter</h1>
+                <div class="intro">
+            <P><span>Suhu</span> adalah besaran fisika yang menggambarkan tingkat panas atau dinginnya
+            suatu benda atau lingkungan. Dalam kehidupan sering kali diperlukan pengukuran suhu dalam satuan
+        yang berbeda, tergantung pada standar yang digunakan di suatu negara.</P>
+            <p>Oleh karena itu,<span>Konversi Suhu</span>menjadi hal yang penting untuk memastikan kesesuaian data
+            dan pemahaman lintas sistem pengukuran. Dua satuan suhu yang paling umum digunakan yaitu Celcius (&deg;C),
+        yang merupakan standar internasional dalam sistem metrik, dan Fahrenheit (&deg;F), yang umum digunakan di beberapa negara.</p>
+            <P>Alat konversi suhu ini dirancang untuk memudahkan proses perhitungan dan interpretasi nilai suhu
+                dari satu satuan ke satuan lainnya secara cepat, akurat, dan efisien.</P>
+                </div>
+         </section>
+
+         <!-- Form Konversi Suhu -->
+          <form class="section-content">
+            <div class="section-item">
+                <label for="konversi-input">Celcius (&deg;C):</label>
+            </div>
+
+            <div class="section-item">
+                <textarea id="konversi-input"></textarea>
+            </div>
+
+            <!-- Form Action -->
+             <div class="section-item">
+                <button>Konversi</button>
+                <button>Reset</button>
+                <button>Reverse</button>
+             </div>
+          </form>
+
+          <!-- Hasil Konversi Suhu -->  
+           <section class="section-content">
+            <div class="section-item">
+                <label for="result-input">Fahrenheit (&deg;F):</label>
+            </div>
+
+            <div class="section-item">
+                <textarea id="result-input" readonly></textarea>
+            </div>
+           </section>   
+
+           <!-- Penjelasan -->
+            <section class="section-content">
+                <div class="section-item">
+                    <label for="calculate-detail">Cara Kalkulasi:</label>
+                </div>
+    
+                <div class="section-item">
+                    <textarea id="calculate-detail" readonly></textarea>
+                </div>
+            </section>
+
+            <!-- Informasi Tambahan -->
+             <section>
+                <header>
+                    <h1>Cara Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h1>
+                </header>
+
+                <hr />
+
+                <!-- Konten Informasi-->
+                <article>
+                    <p>Suhu <span class="formula">S</span> dalam derajat Fahrenheit (&deg;F)</p>
+
+                    <!-- Formula -->
+                     <div class="formula">
+                        S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> x 9/5) + 32
+                    </div>
+                    <div>
+                        atau
+                    </div>
+
+                    <div class="formula">
+                        S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> x 1,8) + 32
+                    </div>  
+                </article>
+                
+             </section>
+      </main>
+
+      <!-- Footer Content-->
+       <footer>
+            <P>&copy;2025 Cindy. All rights reserved.</P>   
+       </footer>
+</body>
+
+</html>
