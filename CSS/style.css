@@ -2,6 +2,7 @@
     padding: 32px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
+    background-color:floralwhite;
  }   
 
 p,
@@ -10,9 +11,25 @@ div {
 }
 
 button {
+    background-color: #555555;
     border: none;
-    padding: 8px;
+    color: white;
+    padding: 10px;
     border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size:10px;
+    margin: 4px 2px;
+    transition-duration: 0.1s;
+    cursor: pointer;
+
+}
+
+.button1:hover{
+background-color: white;
+color: black;
+border: 2px solid #555555;
 }
 
  .section-content {
@@ -33,10 +50,23 @@ textarea {
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
+    border-color: cornflowerblue;
 }
-
 
 .formula {
     font-style: italic;
     font-size: xx-large;
+}
+
+.img-slideshow {
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+}
+img {
+    width: 80%;
+}
+
+.h5 {
+    text-align: center;
 }
