@@ -1,7 +1,7 @@
  body {
     padding: 32px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: cursive;
     background-color:floralwhite;
  }   
 
@@ -9,6 +9,11 @@ p,
 div {
     text-align: justify;
 }
+
+.title {
+    text-align: left;
+}
+
 
 button {
     background-color: #555555;
@@ -23,13 +28,6 @@ button {
     margin: 4px 2px;
     transition-duration: 0.1s;
     cursor: pointer;
-
-}
-
-.button1:hover{
-background-color: white;
-color: black;
-border: 2px solid #555555;
 }
 
  .section-content {
@@ -70,3 +68,34 @@ img {
 .h5 {
     text-align: center;
 }
+
+@media only screen and (max-width: 750px){
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 16px;
+    }
+    label {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 850px){
+    p {
+        font-size: 18px;
+    }
+    label {
+        font-size: 18px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width: 851px) and (max-width: 980px) {
+    p {
+        font-size: 20px;
+    }
+}
+

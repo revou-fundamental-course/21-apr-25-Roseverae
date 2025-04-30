@@ -12,13 +12,14 @@
 
 <body>
     <!-- Header Content -->
-     <header></header>
+     <header>
+        <h1>Temperature Converter</h1>
+     </header>
 
      <!-- Main Content -->
       <main>
         <!-- Introduction -->
          <section>
-                <h1>Temperature Converter</h1>
                 <div>
                     <img class="img-slideshow" src="assets/Banner 1.png" alt="Banner 1">
                     <img class="img-slideshow" src="assets/Banner 2.webp" alt="Banner 2">
@@ -27,7 +28,7 @@
             <P><span>Suhu</span> adalah besaran fisika yang menggambarkan tingkat panas atau dinginnya
             suatu benda atau lingkungan. Dalam kehidupan sering kali diperlukan pengukuran suhu dalam satuan
         yang berbeda, tergantung pada standar yang digunakan di suatu negara.</P>
-            <p>Oleh karena itu,<span>Konversi Suhu</span>menjadi hal yang penting untuk memastikan kesesuaian data
+            <p>Oleh karena itu,<span>Konversi Suhu</span> menjadi hal yang penting untuk memastikan kesesuaian data
             dan pemahaman lintas sistem pengukuran. Dua satuan suhu yang paling umum digunakan yaitu Celcius (&deg;C),
         yang merupakan standar internasional dalam sistem metrik, dan Fahrenheit (&deg;F), yang umum digunakan di beberapa negara.</p>
             <P>Alat konversi suhu ini dirancang untuk memudahkan proses perhitungan dan interpretasi nilai suhu
@@ -35,45 +36,56 @@
                 </div>
          </section>
 
+         <hr class="title">
+         Note :
+         <p> 
+            Masukkan suhu derajat Celcius (°C) ke kotak dibawah ini, lalu klik tombol konversi untuk mendapatkan
+            hasilnya dalam suhu Fahrenheit (°F).
+         </p>   
+        </hr>
+
          <!-- Form Konversi Suhu -->
           <form class="section-content">
             <div class="section-item">
-                <label for="konversi-input">Celcius (&deg;C):</label>
+                <label for="celcius" class="derajat">Celcius (&deg;C):</label>
             </div>
 
             <div class="section-item">
-                <textarea id="konversi-input"></textarea>
+                <textarea id="celcius" placeholder="Masukkan Suhu Celcius"></textarea> 
             </div>
 
             <!-- Form Action -->
-             <div class="section-item">
-                <button class="button button1">Konversi</button>
-                <button class="button button1">Reset</button>
-                <button class="button button1">Reverse</button>
+             <div class="btn-calculator">
+                <button class="btn-convert" onclick="konversi()">Konversi</button>
+                <button class="btn-clear" onclick="reset()">Reset</button>
+                <button class="btn-change" onclick="reverse()">Reverse</button>
              </div>
           </form>
 
           <!-- Hasil Konversi Suhu -->  
            <section class="section-content">
             <div class="section-item">
-                <label for="result-input">Fahrenheit (&deg;F):</label>
+                <label for="fahrenheit" class="derajat">Fahrenheit (&deg;F):</label>
             </div>
 
             <div class="section-item">
-                <textarea id="result-input" readonly></textarea>
+                <textarea id="Fahrenheit" placeholder="Hasil Fahrenheit" readonly></textarea>
             </div>
            </section>   
 
            <!-- Penjelasan -->
             <section class="section-content">
                 <div class="section-item">
-                    <label for="calculate-detail">Cara Kalkulasi:</label>
+                    <label for="calculation" class="derajat">Cara Kalkulasi:</label>
                 </div>
     
                 <div class="section-item">
-                    <textarea id="calculate-detail" readonly></textarea>
+                    <textarea id="caraKalkulasi" placeholder="Penjelasan perhitungan..." readonly></textarea>
                 </div>
+                <a onclick="reverse()">Fahrenheit (°F) ke Celcius (°C)</a>
             </section>
+
+            
 
             <!-- Informasi Tambahan -->
              <section>
