@@ -45,44 +45,44 @@
         </hr>
 
          <!-- Form Konversi Suhu -->
-          <form class="section-content">
-            <div class="section-item">
-                <label for="celcius" class="derajat">Celcius (&deg;C):</label>
+          <form class="form-content" id="form"> 
+            <div class="container">
+                <label for="konversi-input">Celcius (&deg;C):</label>
             </div>
 
-            <div class="section-item">
-                <textarea id="celcius" placeholder="Masukkan Suhu Celcius"></textarea> 
+            <div class="container">
+                <textarea id="konversi-input" name="konversi-input"></textarea> 
             </div>
 
             <!-- Form Action -->
-             <div class="btn-calculator">
-                <button class="btn-convert" onclick="konversi()">Konversi</button>
-                <button class="btn-clear" onclick="reset()">Reset</button>
-                <button class="btn-change" onclick="reverse()">Reverse</button>
-             </div>
+            <div class="container">
+                <button class="button-konversi" onclick="konversi()">Konversi</button>
+                <button class="button-reset" onclick="reset()">Reset</button>
+                <button class="button-reverse" onclick="reverse()">Reverse</button>
+            </div>
+
           </form>
 
           <!-- Hasil Konversi Suhu -->  
            <section class="section-content">
-            <div class="section-item">
-                <label for="fahrenheit" class="derajat">Fahrenheit (&deg;F):</label>
+            <div class="container">
+                <label for="result-output">Fahrenheit (&deg;F):</label>
             </div>
 
-            <div class="section-item">
-                <textarea id="Fahrenheit" placeholder="Hasil Fahrenheit" readonly></textarea>
+            <div class="container">
+                <textarea name="result-output" id="result-output" readonly></textarea>
             </div>
            </section>   
 
            <!-- Penjelasan -->
             <section class="section-content">
-                <div class="section-item">
-                    <label for="calculation" class="derajat">Cara Kalkulasi:</label>
+                <div class="container">
+                    <label for="calculate-detail">Cara Kalkulasi:</label>
                 </div>
     
-                <div class="section-item">
-                    <textarea id="caraKalkulasi" placeholder="Penjelasan perhitungan..." readonly></textarea>
+                <div class="container">
+                    <textarea name="calculate-detail" id="calculate-detail" readonly></textarea>
                 </div>
-                <a onclick="reverse()">Fahrenheit (°F) ke Celcius (°C)</a>
             </section>
 
             

@@ -1,40 +1,79 @@
-// konversi suhu
+// Fungsi Tombol Konversi
 function konversi() {
-  let celcius =
-  document.getElementById('celcius').value;
-    if (celcius === '') {
-    alert('Isi suhu celcius dulu!');
-    return;
-  }
-  let fahrenheit = (celcius * 9 / 5) + 32;
+     const detail = document.querySelector("textarea[name='calculate-detail']")
+    const hasil = document.querySelector("textarea[name='result-output']")
+    
+// Membuat HTML agar tidak refresh
+    document.getElementById("form").addEventListener('submit', function(event) {event.preventDefault();})
+    
+// Perhitungan Celcius
+    let nilai_konversi = document.getElementById("konversi-input").value
+    let nilai_hasil = (parseFloat(nilai_konversi) * 9/5) + 32
+    
+     if (isNaN(nilai_konversi)) {
+            detail.value = "Masukkan Angka yang Benar..."
+            hasil.value = ""
+            return
+        }
+    
+// Hasil Fahrenheit
+    hasil.value = nilai_hasil.toFixed(2) + "°F"
 
-document.getElementById('fahrenheit').value= fahrenheit.toFixed(2);
+    console.log(hasil.value)
+    
+    detail.value = "(" + nilai_konversi + "°C x 9/5) + 32 = " + nilai_hasil.toFixed(2) + "°F"
+    console.log(detail.value)
+    
+    }
+    
+// Fungsi Tombol Reset
+    function reset() {
+    
+    //    definisi variabel reset
+        const detail = document.querySelector("textarea[name='calculate-detail']")
+        const hasil = document.querySelector("textarea[name='result-output']")
+        const awal = document.querySelector("textarea[name='konversi-input']")
+    
+    //    membuat HTML agar tidak refresh
+        document.getElementById("form").addEventListener('submit', function(event) {event.preventDefault();})
+    
+    //    output reset
+        awal.value = ""
+        detail.value = ""
+        hasil.value = ""
+        console.log("clearing all")
+    
+    }
+// Fungsi Tombol Konversi
+    function reverse() {
+    
+    //    definisi variabel konversi()
+        const detail_reverse = document.querySelector("textarea[name='calculate-detail']")
+        const hasil = document.querySelector("textarea[name='result-output']")
+    
+    //    membuat HTML tidak refresh, kalau tidak kalkulasi di readonly textarea hilang
+        document.getElementById("form").addEventListener('submit', function(event) {event.preventDefault();})
+    
+    //    perhitungan konversi
+        let nilai_konversi = document.getElementById("konversi-input").value
+        let nilai_hasil = (parseFloat(nilai_konversi) * 9/5) + 32
+    
+        if (isNaN(nilai_konversi)) {
+            detail_reverse.value = "Masukkan Angka yang Benar..."
+            hasil.value = ""
+            return
+        }
+    
+    //    output hasil konversi reverse dengan metode queryselector
+        hasil.value = nilai_hasil.toFixed(2) + "°F"
+        console.log(hasil.value)
+    
+        detail_reverse.value = "(" + nilai_hasil.toFixed(2) + "°F - 32) x 5/9 = " + nilai_konversi + "°C"
+        console.log(detail_reverse.value)
+    
+    }
 
-document.getElementById('caraKalkulasi').value = `(${celcius} x 9 / 5) + 32 = $
-{fahrenheit.toFixed(2)} °F`;
-}
-
-function reset() {
-  document.getElementById('celcius').value = '';
-  document.getElementById('fahrenheit').value = '';
-  document.getElementById('caraKalkulasi').value = '';
-}
-
-function reverse() {
-  let fahrenheit =
-  document.getElementById('fahrenheit').value;
-  if (fahrenheit === '') {
-    alert('Isi suhu fahrenheit dulu!');
-    return;
-  }
-  let celcius = (fahrenheit - 32) * 5 / 9;
-
-document.getElementById('celcius').value = celcius.toFixed(2);
-
-document.getElementById('caraKalkulasi').value = `(${fahrenheit} - 32) x 5/9 = $
-{celcius.toFixed(2)} °C`;
-}
-
+// Banner Auto Slide
 // Function Auto Slide
 var myIndex = 0;
 carousel();
@@ -50,4 +89,3 @@ function carousel() {
   x[myIndex-1].style.display = "block";  
   setTimeout(carousel, 2000);
 }
-
